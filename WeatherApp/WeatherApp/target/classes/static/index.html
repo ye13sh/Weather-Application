@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="WeatherApp">
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+<div ng-controller="WeatherController">
+    <h1>Weather App</h1>
+    <input type="text" ng-model="city" placeholder="Enter city name">
+    <button ng-click="getWeather()">Get Weather</button>
+    <div ng-show="weatherData">
+        <h2>{{ weatherData.name }}</h2>
+        <p>{{ weatherData.weather[0].main }}</p>
+        <p>Temparature: {{ weatherData.main.temp }} C</p>
+        <p>Humidity: {{ weatherData.main.humidity }}%</p>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

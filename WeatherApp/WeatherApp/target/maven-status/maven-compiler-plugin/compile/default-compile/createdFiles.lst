@@ -1,0 +1,6 @@
+com\weather\service\WeatherService.class
+com\weather\commonDto\WeatherDto.class
+com\weather\commonDto\JsonDeserial.class
+com\weather\commonDto\WeatherMain.class
+com\weather\controller\WeatherController.class
+com\weather\WeatherAppApplication.class
